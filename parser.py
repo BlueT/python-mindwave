@@ -35,7 +35,7 @@ class Parser:
 		self.raw_file = None
 		self.esense_file = None
 		self.mindwaveMobileSocket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-        	mindwaveMobileAddress = '9C:B7:0D:72:CD:02';
+        	mindwaveMobileAddress = '74:E5:43:9C:5E:97';
         	try:
                 	self.mindwaveMobileSocket.connect((mindwaveMobileAddress, 1))
             	except bluetooth.btcommon.BluetoothError as error:
