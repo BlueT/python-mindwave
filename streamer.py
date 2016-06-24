@@ -4,6 +4,7 @@ import scipy
 from pyeeg import bin_power
 from parser import Parser
 
+
 p = Parser()
 
 # Mindset
@@ -86,7 +87,7 @@ while True:
 			attention_latest = p.current_attention
 			if attention_latest != attention_prev:
 				attention_prev = attention_latest
-				msg = "attention: " + str(attention_latest)
+				msg = "attention:" + str(attention_latest)
 				print "Sending: " + msg
 				csock.send(msg)
 			
@@ -98,7 +99,7 @@ while True:
 			meditation_latest = p.current_meditation
 			if meditation_latest != meditation_prev:
 				meditation_prev = meditation_latest
-				msg = "meditation: " + str(meditation_latest)
+				msg = "meditation:" + str(meditation_latest)
 				print "Sending: " + msg
 				csock.send(msg)
 			
@@ -120,4 +121,3 @@ while True:
 					#~ print "Sending: " + msg
 					#~ csock.send(msg)
 					#~ lv = v
-			
